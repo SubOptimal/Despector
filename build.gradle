@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'gradle.plugin.net.minecrell:licenser:0.3'
-        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.0'
     }
 }
 
@@ -95,8 +95,6 @@ javadoc {
     options.links(
             'https://docs.oracle.com/en/java/javase/11/docs/api'
     )
-    // Disable the crazy super-strict doclint tool in Java 8
-    options.addStringOption('Xdoclint:none', '-quiet')
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
